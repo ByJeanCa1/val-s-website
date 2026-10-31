@@ -99,21 +99,24 @@ document.querySelectorAll(".seg[data-ctx-group]").forEach(seg => {
   if (ids.length) show(ids[0]);
 });
 
-// ===== British / American spelling switch =====
-// Each .spell has data-stem, data-uk and data-us (the ending that changes).
-(function () {
-  const seg = document.getElementById("spell-seg");
-  if (!seg) return;
-  const words = document.querySelectorAll(".spell");
+// ===== Variety switches (British/American spelling, Spanish/Portuguese morphemes) =====
+// A [data-switch] block holds a .seg whose buttons have data-variety="uk" etc.
+// Each .spell inside has one attribute per variety, e.g. data-uk="col[our]".
+// The part in [brackets] is highlighted.
+document.querySelectorAll("[data-switch]").forEach(block => {
+  const buttons = block.querySelectorAll(".seg button[data-variety]");
+  const words = block.querySelectorAll(".spell");
+  const esc = s => s.replace(/&/g, "&amp;").replace(/</g, "&lt;");
   function render(variety) {
-    seg.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.variety === variety)));
+    buttons.forEach(b => b.setAttribute("aria-pressed", String(b.dataset.variety === variety)));
     words.forEach(w => {
-      w.innerHTML = `${w.dataset.stem}<span class="end">${w.dataset[variety]}</span>`;
+      const v = w.dataset[variety] || "";
+      w.innerHTML = esc(v).replace(/\[([^\]]*)\]/g, '<span class="end">$1</span>');
     });
   }
-  seg.querySelectorAll("button").forEach(b => b.addEventListener("click", () => render(b.dataset.variety)));
-  render("uk");
-})();
+  buttons.forEach(b => b.addEventListener("click", () => render(b.dataset.variety)));
+  if (buttons.length) render(buttons[0].dataset.variety);
+});
 
 // ===== Slide galleries =====
 document.querySelectorAll(".gallery-wrap").forEach(wrap => {

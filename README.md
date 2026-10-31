@@ -19,7 +19,7 @@ Static site (HTML + CSS + JS, no build step) for GitHub Pages.
 3. Put images in `assets/`.
 
 ## Files
-- `index.html` home, `semantics.html` Unit 6, `pragmatics.html` Unit 7, `variation.html` language variation, `presentations.html` group projects, `reflection.html`
+- `index.html` home, `semantics.html` Unit 6, `pragmatics.html` Unit 7, `variation.html` language variation, `presentations.html` three group presentations, `reflection.html`
 - `assets/slides/` slide images for the presentations page
 - `css/style.css` all styles; colors are the variables at the top
 - `js/main.js` word flip, entailment quiz, switchers, spelling switch, slide galleries
