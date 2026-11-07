@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pragmatics | Linguistics I</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Charis+SIL:ital,wght@0,400;0,700;1,400&family=Inter+Tight:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">Linguistics I</a>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="semantics.html">Semantics</a></li>
+      <li><a href="pragmatics.html" aria-current="page">Pragmatics</a></li>
+      <li><a href="variation.html">Variation</a></li>
+      <li><a href="presentations.html">Presentations</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="reflection.html">Reflection</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="unit-hero">
+  <p class="unit-label">Unit 7</p>
+  <h1 class="display">Pragmatics</h1>
+  <p class="lede">The same words can mean different things. Context decides.</p>
+</header>
+
+<main>
+
+  <section class="section">
+    <div class="read">
+      <p class="statement"><mark>He</mark> is <mark>there</mark> <mark>now</mark>.</p>
+      <p>Who is <em>he</em>? Where is <em>there</em>? When is <em>now</em>? The sentence is perfectly grammatical, but on its own we can't know what it means. Its meaning depends on the context it's used in.</p>
+
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/y-EdAwDZZoA?end=615" title="Pragmatics class video" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Class video. Assigned up to minute 10:15.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="read">
+      <h2>Three kinds of context</h2>
+      <p>Choose a context to see how it shapes the meaning of an utterance.</p>
+
+      <div class="seg" data-ctx-group role="group" aria-label="Kind of context">
+        <button data-ctx="ctx-ling" aria-pressed="true">Linguistic</button>
+        <button data-ctx="ctx-sit" aria-pressed="false">Situational</button>
+        <button data-ctx="ctx-soc" aria-pressed="false">Social</button>
+      </div>
+
+      <div class="ctx-panel" id="ctx-ling">
+        <p class="utterance">"Yes."</p>
+        <p class="scene">The words said before an utterance. On its own, <em>yes</em> tells us almost nothing.</p>
+        <p class="reading">After <em>"Do you want to go to the beach on Saturday?"</em>, <em>yes</em> means <strong>I want to go to the beach on Saturday.</strong></p>
+      </div>
+
+      <div class="ctx-panel" id="ctx-sit" hidden>
+        <p class="utterance">"The professor left."</p>
+        <p class="scene">The situation in which something is said: where we are, who is present, what is happening.</p>
+        <p class="reading">If I'm a student sitting in Professor Sánchez's class right now, <em>the professor</em> most likely means <strong>Professor Sánchez.</strong></p>
+      </div>
+
+      <div class="ctx-panel" id="ctx-soc" hidden>
+        <p class="utterance">"Can you take the trash?"</p>
+        <p class="scene">The social relationship between the people speaking.</p>
+        <p class="reading">From a parent to a child, this isn't a question about ability. It's <strong>a polite request</strong>, and everyone understands it that way because of who is speaking to whom.</p>
+      </div>
+
+      <figure class="figure">
+        <img src="assets/portfolio/this-is-fine.jpg" alt="The This is fine meme: a dog drinking coffee in a room on fire" loading="lazy" style="border-radius:12px">
+        <figcaption>&ldquo;This is fine&rdquo; only works because of context: the burning room tells us the dog means the opposite. <a href="portfolio.html#this-is-fine">See the full analysis in our portfolio</a>.</figcaption>
+      </figure>
+
+      <h3>Podcast: Meaning beyond the words</h3>
+      <p>Lingthusiasm is a podcast by linguists Gretchen McCulloch and Lauren Gawne. This playlist collects their episodes on pragmatics: how context, cooperation, and politeness shape what we really mean.</p>
+      <div class="video">
+        <iframe src="https://www.youtube-nocookie.com/embed/videoseries?list=PLcqOJ708UoXT1KmfcY841iR3vtkXVfi1i" title="Lingthusiasm: pragmatics episodes" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <p class="video-caption">Lingthusiasm, pragmatics playlist. Use the playlist button in the player to choose an episode.</p>
+
+      <div class="notes">
+        <h4>Our notes</h4>
+        <p>In Costa Rica, <em>usted</em> is a good example of social context. We use it with professors and grandparents, but also with our parents and even with close friends, so the pronoun alone doesn't tell you how formal a situation is. <em>Usted</em> with a professor is respect; <em>usted</em> with a friend can be affectionate.</p>
+        <p>Situational context was the easiest type for us to understand, because it happens all the time in class: when someone says "the professor," everyone knows who they mean.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<nav class="pager" aria-label="Units">
+  <a href="semantics.html"><small>Previous unit</small><span>Semantics</span></a>
+  <a href="variation.html" style="text-align:right"><small>Next unit</small><span>Language variation</span></a>
+</nav>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>Linguistics I, Prof. Luis Roberto Pineda Canales</span>
+    <span>Made by STUDENT NAME</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
